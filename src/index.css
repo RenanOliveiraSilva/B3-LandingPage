@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+/* =========================================
+   B3 TECH SOLUTIONS — BRAND TOKENS
+   ========================================= */
+@theme {
+  --color-b3-primary-dark:    #061735;
+  --color-b3-primary-blue:    #0F3759;
+  --color-b3-secondary-blue:  #33578B;
+  --color-b3-accent:          #1BC29D;
+  --color-b3-deep-teal:       #028578;
+  --color-b3-bg-dark:         #07111F;
+  --color-b3-surface:         #0B1B2E;
+  --color-b3-surface-up:      #10243D;
+  --color-b3-text:            #F4F8FB;
+  --color-b3-text-secondary:  #A9B7C8;
+  --color-b3-text-muted:      #7F91A6;
+
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+}
+
+/* =========================================
+   GLOBAL BASE STYLES
+   ========================================= */
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: #07111F;
+  color: #F4F8FB;
+}
+
+::selection {
+  background: #1BC29D;
+  color: #061735;
+}
+
+/* =========================================
+   CUSTOM ANIMATIONS
+   ========================================= */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float 6s ease-in-out infinite;
+  animation-delay: -3s;
+}
