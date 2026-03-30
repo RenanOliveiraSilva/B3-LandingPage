@@ -124,24 +124,25 @@ const STYLES = `
 ───────────────────────────────────────────── */
 function RatingCard() {
   return (
-    <div className="glass-card float-a rounded-2xl px-5 py-4" style={{ minWidth: 190 }}>
+    <div className="glass-card float-a rounded-2xl px-5 py-4" style={{ minWidth: 220 }}>
       <div className="flex items-center gap-3">
         <div
           className="flex items-center justify-center w-11 h-11 rounded-xl flex-shrink-0"
           style={{ background: 'linear-gradient(135deg, rgba(27,194,157,0.22), rgba(2,133,120,0.10))' }}
         >
-          {/* star */}
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="#1bc29d">
-            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+          {/* target icon */}
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1bc29d" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <circle cx="12" cy="12" r="10" />
+            <circle cx="12" cy="12" r="6" />
+            <circle cx="12" cy="12" r="2" />
           </svg>
         </div>
         <div>
           <div className="flex items-baseline gap-1">
-            <span className="stat-number text-[28px] text-white">4.9</span>
-            <span style={{ color:'#1bc29d', fontSize:12, fontWeight:600 }}>★</span>
+            <span className="stat-number text-[18px] text-white tracking-tight">Foco Total</span>
           </div>
-          <p style={{ color:'rgba(180,200,220,0.7)', fontSize:11, lineHeight:1.4, fontWeight:500 }}>
-            2.6K+ Feedbacks<br/>positivos
+          <p style={{ color:'rgba(180,200,220,0.7)', fontSize:12, lineHeight:1.35, fontWeight:500, marginTop:2, maxWidth: 170 }}>
+            Em entregar soluções que realmente funcionam no dia a dia.
           </p>
         </div>
       </div>
@@ -153,18 +154,17 @@ function UsersCard() {
   return (
     <div className="glass-card-light float-b rounded-2xl px-5 py-4">
       <p style={{ color:'rgba(180,200,220,0.6)', fontSize:10, fontWeight:600, letterSpacing:'0.12em', textTransform:'uppercase', marginBottom:4 }}>
-        Novos Clientes
+        Abordagem Exclusiva
       </p>
       <div className="flex items-end gap-1">
-        <span className="stat-number text-[30px] text-white">80</span>
-        <span className="stat-number text-[22px]" style={{ color:'#1bc29d', marginBottom:2 }}>+</span>
+        <span className="stat-number text-[20px] text-white">Sob Medida</span>
       </div>
       <div className="flex items-center gap-1.5 mt-1">
         <span style={{
           display:'inline-block', width:6, height:6, borderRadius:'50%',
           background:'#1bc29d', boxShadow:'0 0 6px rgba(27,194,157,0.7)'
         }} />
-        <span style={{ color:'#1bc29d', fontSize:10, fontWeight:600 }}>+12% este mês</span>
+        <span style={{ color:'#1bc29d', fontSize:10, fontWeight:600 }}>Alta Qualidade</span>
       </div>
     </div>
   )
@@ -278,7 +278,7 @@ export default function Hero() {
                   boxShadow: '0 0 8px rgba(27,194,157,0.8)',
                   flexShrink: 0,
                 }} />
-                Software house com foco em resultado
+                Especialistas em desenvolvimento web
               </div>
 
               {/* Headline */}
@@ -313,7 +313,7 @@ export default function Hero() {
                   maxWidth: 430,
                 }}
               >
-                Desenvolvemos landing pages, sistemas web e soluções sob medida
+                Desenvolvemos landing pages, sites e sistemas sob medida
                 para empresas que querem crescer com mais eficiência e presença
                 digital.
               </p>
@@ -364,39 +364,22 @@ export default function Hero() {
                 </a>
               </div>
 
-              {/* Trust logos */}
-              <div className="hero-fade-5">
-                <p style={{
-                  fontSize: 10,
-                  fontWeight: 700,
-                  letterSpacing: '0.16em',
-                  textTransform: 'uppercase',
-                  color: 'rgba(140,170,190,0.45)',
-                  marginBottom: '0.8rem',
-                }}>
-                  Empresas que confiam
-                </p>
-
-                {/* Scrolling ticker */}
-                <div className="ticker-wrap" style={{ maxWidth: 440 }}>
-                  <div className="ticker-inner">
-                    {['TechCorp', 'Inovadata', 'CloudBR', 'NexaGroup', 'TechCorp', 'Inovadata', 'CloudBR', 'NexaGroup'].map((name, i) => (
-                      <span
-                        key={i}
-                        style={{
-                          fontSize: 13,
-                          fontWeight: 700,
-                          color: 'rgba(140,170,190,0.38)',
-                          letterSpacing: '0.06em',
-                          marginRight: 48,
-                          whiteSpace: 'nowrap',
-                          fontFamily: "'Syne', sans-serif",
-                        }}
-                      >
-                        {name}
-                      </span>
-                    ))}
+              {/* Trust block */}
+              <div className="hero-fade-5 mt-4 border-t border-white/5 pt-6" style={{ maxWidth: 440 }}>
+                <div className="flex items-center gap-3">
+                  <div className="w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0" style={{ background: 'rgba(27,194,157,0.08)' }}>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1bc29d" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
                   </div>
+                  <p style={{
+                    fontSize: 13,
+                    fontWeight: 500,
+                    lineHeight: 1.5,
+                    color: 'rgba(180,200,220,0.65)'
+                  }}>
+                    <strong style={{ color: '#e8f4f1', fontWeight: 600 }}>Projetos desenvolvidos</strong> com foco em performance, usabilidade e resultado.
+                  </p>
                 </div>
               </div>
             </div>
@@ -523,19 +506,19 @@ export default function Hero() {
               <div className="absolute -top-2 left-0 float-a" style={{ zIndex:20 }}>
                 <div
                   className="glass-card flex items-center gap-2 px-3.5 py-2.5 rounded-xl"
-                  style={{ fontSize:11, fontWeight:500, color:'#e8f4f1' }}
+                  style={{ fontSize:11, fontWeight:600, color:'#e8f4f1' }}
                 >
-                  <span className="stat-number text-[17px]" style={{ color:'#1bc29d' }}>4.9</span>
-                  <span style={{ color:'rgba(160,190,210,0.65)' }}>★ 50+ Projetos</span>
+                  <span style={{ color:'#1bc29d' }}>✓</span>
+                  <span>Soluções que funcionam</span>
                 </div>
               </div>
               <div className="absolute -top-2 right-0 float-b" style={{ zIndex:20 }}>
                 <div
                   className="glass-card flex items-center gap-1.5 px-3 py-2 rounded-lg"
-                  style={{ fontSize:11, fontWeight:500 }}
+                  style={{ fontSize:11, fontWeight:600, color:'#e8f4f1' }}
                 >
-                  <span className="stat-number text-[15px]" style={{ color:'#1bc29d' }}>98%</span>
-                  <span style={{ color:'rgba(160,190,210,0.65)' }}>Satisfação</span>
+                  <span className="stat-number text-[15px]" style={{ color:'#1bc29d' }}>+</span>
+                  <span style={{ color:'#e8f4f1' }}>Sob Medida</span>
                 </div>
               </div>
             </div>
