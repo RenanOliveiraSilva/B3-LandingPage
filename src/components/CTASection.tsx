@@ -19,7 +19,7 @@ export default function CTASection() {
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <a
-              href="https://wa.me/5500000000000"
+              href="https://wa.me/5516992558410"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2.5 text-[15px] font-semibold px-8 py-3.5 rounded-full bg-b3-accent text-b3-primary-dark hover:bg-[#15a888] hover:shadow-[0_8px_32px_rgba(27,194,157,0.25)] hover:-translate-y-0.5 transition-all"
@@ -28,7 +28,7 @@ export default function CTASection() {
               Falar no WhatsApp
             </a>
             <a
-              href="mailto:contato@b3tech.com.br"
+              href="mailto:contato@b3tecnologia.com"
               className="inline-flex items-center gap-2.5 text-[15px] font-semibold px-8 py-3.5 rounded-full border border-white/14 text-b3-text hover:border-b3-accent hover:text-b3-accent hover:bg-b3-accent/5 transition-all"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" /></svg>
